@@ -11,10 +11,11 @@ const App = () => {
     'Programming without an extremely heavy use of console.log is same as if a doctor would refuse to use x-rays or blood tests when diagnosing patients'
   ]
 
-  const maxVotesIndex = votes.indexOf(Math.max(...votes))
+
   const randomAnecdote= () => Math.floor(anecdotes.length * Math.random())
   const [votes, setVotes] = useState(Array(anecdotes.length).fill(0))
   const [selected, setSelected] = useState(randomAnecdote())
+  const maxVotesIndex = votes.indexOf(Math.max(...votes))
   const handleNewAnecdote = () => setSelected(randomAnecdote())
 
   const handleVote = () => {
